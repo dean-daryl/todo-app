@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function App() {
+function Task() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
 
@@ -18,16 +18,22 @@ function App() {
   };
 
   return (
-    <div >
-      <h1>Neet</h1>
-      <input
-        type="text"
-        value={newTask}
-        onChange={(e) => setNewTask(e.target.value)}
-        placeholder="Enter a new task"
-      />
-      <button onClick={handleAddTask}>Add Task</button>
-      <ul>
+    <div className="task-section">
+      <div className="task-tracker">
+        <input
+          type="text"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+          placeholder="Enter task name"
+        />
+        <textarea placeholder="Enter task description"></textarea>
+        <input type="file" />
+        <button className="add-task" onClick={handleAddTask}>
+          Add Task
+        </button>
+      </div>
+      
+      <ul className="task-list">
         {tasks.map((task, index) => (
           <li key={index}>
             {task}
@@ -39,4 +45,4 @@ function App() {
   );
 }
 
-export default App;
+export default Task;
