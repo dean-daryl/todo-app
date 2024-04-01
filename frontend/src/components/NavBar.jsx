@@ -10,7 +10,7 @@ const NavBar = () => {
 
     return (
       <nav>
-          <h2>Neet</h2>
+          <h2 className='logo'>Task Ease</h2>
         <div className='profile'>
           <img src={profileImage} alt="Profile Image" />
         </div>

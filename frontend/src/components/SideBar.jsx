@@ -9,7 +9,6 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            {/* Sidebar content goes here */}
             <ul>
                 <li className={selectedItem === 'Dashboard' ? 'active' : ''} onClick={() => handleItemClick('Dashboard')}>Dashboard</li>
                 <li className={selectedItem === 'Projects' ? 'active' : ''} onClick={() => handleItemClick('Projects')}>Projects</li>

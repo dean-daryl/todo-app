@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: black;
   background-color: #242424;
 
   font-synthesis: none;
@@ -23,6 +23,7 @@ a:hover {
 }
 
 body {
+  background-color: #393e46;
   margin: 0;
   color: #eeeeee;
   /* max-height: 100vh; */
@@ -70,7 +71,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
+  padding: 0 3em;
   background-color: #222831;
   height: fit-content;
 }
@@ -86,7 +87,12 @@ nav li {
   height: 50px;
   border-radius: 50%;
 }
-
+.logo {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #eeeeee;
+  font-style: italic;
+}
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -95,6 +101,17 @@ nav li {
   background-color: #222831;
   height: 100vh;
   width: 200px;
+}
+.sidebar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.sidebar ul li:hover {
+  color: #393e46;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .container {
   display: flex;
@@ -129,7 +146,6 @@ textarea {
   max-height: 50px;
   min-height: 50px;
   align-self: center;
-
 }
 .task-section {
   display: flex;
@@ -152,6 +168,7 @@ textarea {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  color: black;
   height: 75vh;
 }
 .add-task-btn {
@@ -191,12 +208,12 @@ textarea {
   width: fit-content;
   height: fit-content;
 }
-.task-card p{
+.task-card p {
   width: 200px;
 }
 .task-content {
   display: flex;
-  align-items:center;
+  align-items: center;
   gap: 2em;
 }
 .task-card button {

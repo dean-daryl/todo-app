@@ -57,7 +57,7 @@ function Task() {
       method: 'DELETE',
     });
     window.location.reload();
-  }
+  };
   return (
     <div className="task-section">
       <div
@@ -69,18 +69,6 @@ function Task() {
           value={newTask.title}
           onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
           placeholder="Enter task name"
-        />
-        <textarea
-          value={newTask.description}
-          onChange={(e) =>
-            setNewTask({ ...newTask, description: e.target.value })
-          }
-          placeholder="Enter task description"
-        ></textarea>
-        <input
-          type="file"
-          value={newTask.file}
-          onChange={(e) => setNewTask({ ...newTask, cover: e.target.value })}
         />
         <button className="add-task" onClick={handleAddTask}>
           Add Task
@@ -113,7 +101,12 @@ function Task() {
                     {task.completed ? 'Undo ' : 'Complete'}
                   </button>
                 </div>
-                  <img src={close}  onClick={() => handleDelete(task._id)}  alt="" className="delete" />
+                <img
+                  src={close}
+                  onClick={() => handleDelete(task._id)}
+                  alt=""
+                  className="delete"
+                />
               </div>
             </li>
           ))}
