@@ -1,4 +1,5 @@
-import { Schema, model } from 'mongoose';
+import mongoose, { Schema, model } from 'mongoose';
+import { v4 as uuidv4 } from 'uuid';
 
 const taskSchema = new Schema({
   title: {

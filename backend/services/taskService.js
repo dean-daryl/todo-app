@@ -49,7 +49,7 @@ const updateTaskById = async (taskId, taskData) => {
     }
     return task;
   } catch (error) {
-    throw new Error('Failed to update task');
+    throw new Error('Failed to update task', );
   }
 };
 const toggleCompleteTask = async (taskId) => {
@@ -66,14 +66,14 @@ const toggleCompleteTask = async (taskId) => {
     await task.save();
     return task;
   } catch (error) {
-    throw new Error('Failed to update task');
+    throw new Error(error);
   }
 };
 
 // Delete a task by ID
 const deleteTaskById = async (taskId) => {
   try {
-    const task = await findByIdAndDelete(taskId);
+    const task = await Task.findByIdAndDelete(taskId);
     if (!task) {
       throw new Error('Task not found');
     }

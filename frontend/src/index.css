@@ -23,10 +23,10 @@ a:hover {
 }
 
 body {
-  margin:0;
-  color: #EEEEEE;
-  max-height: 100vh;
-  overflow: hidden;
+  margin: 0;
+  color: #eeeeee;
+  /* max-height: 100vh; */
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -44,6 +44,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  outline: none;
 }
 button:hover {
   border-color: #646cff;
@@ -86,7 +87,7 @@ nav li {
   border-radius: 50%;
 }
 
-.sidebar{
+.sidebar {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -99,13 +100,13 @@ nav li {
   display: flex;
   justify-content: space-between;
 }
-.content{
+.content {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 2em;
 }
-input{
+input {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -117,7 +118,7 @@ input{
   align-self: center;
   width: 220px;
 }
-textarea{
+textarea {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -127,10 +128,18 @@ textarea{
   min-width: 220px;
   max-height: 50px;
   min-height: 50px;
+  align-self: center;
 
 }
-.task-tracker{
+.task-section {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+.task-tracker {
   flex-direction: column;
   gap: 1em;
   padding: 5em;
@@ -138,18 +147,84 @@ textarea{
   height: fit-content;
   border-radius: 5px;
 }
-.task-list{
-  color: black;
+.task-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 75vh;
 }
-.add-task{
+.add-task-btn {
   border-radius: 8px;
   border: 1px solid transparent;
-  width: 60%;
+  width: 300px;
   align-self: center;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
+  cursor: pointer;
+  outline: none;
+}
+.task-list button {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: white;
+}
+.task-card {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  margin: 1em;
+  width: fit-content;
+  height: fit-content;
+}
+.task-card p{
+  width: 200px;
+}
+.task-content {
+  display: flex;
+  align-items:center;
+  gap: 2em;
+}
+.task-card button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  margin: 1em;
+}
+.delete {
+  position: relative;
+  bottom: 15px;
+  left: 20px;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
 }

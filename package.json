@@ -19,6 +19,7 @@
     "concurrently": "^8.2.2"
   },
   "dependencies": {
+    "@mui/material": "^5.15.14",
     "backend": "^1.0.0",
     "express": "^4.19.2"
   }
