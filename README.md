@@ -14,12 +14,15 @@ This is a todo application developed with the MERN stack that aids in managing d
 ## Building Docker Image and Running a Container
 
 1. Pull the Docker image from Docker Hub using the following command: `docker pull deandaryl/congenial-computing-machine-frontend` and `docker pull deandaryl/congenial-computing-machine-backend`
+2. Run the two Docker images in separate terminals using `docker run -p 5173:5173 deandaryl/congenial-computing-machine-frontend` and `docker run -p 3000:3000 deandaryl/congenial-computing-machine-frontend`
 
-2. Build the container for the Docker image using the following command: `docker-compose build`
 
-3. Once the image is built successfully, you can run a container using the following command: `docker-compose run`
+Optionally if you have cloned the repository you can navigate to the project root and execute the following commands
+1. Build the container for the Docker image using the following command: `docker-compose build`
 
-4. Open a web browser and navigate to `http://localhost:5137` to access the ToDo application running inside the Docker container.
+4. Once the image is built successfully, you can run a container using the following command: `docker-compose run`
+
+5. Open a web browser and navigate to `http://localhost:5137` to access the ToDo application running inside the Docker container.
 
 ## Assumptions and Decisions
 
